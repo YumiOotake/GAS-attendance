@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <base target="_top" />
+  </head>
+  <body>
+    <div class="attendance__actions">
+      <div class="attendance__buttons">
+          <button type="button" onclick="google.script.run
+          .withSuccessHandler((result) => {
+            if (result.ok) {
+                alert('出勤しました');
+            } else {
+                alert(result.message);
+            }
+          })
+          .clockIn()">出勤</button>
+          <button type="button" onclick="google.script.run
+          .withSuccessHandler((result) => {
+            if (result.ok) {
+                alert('退勤しました');
+            } else {
+                alert(result.message);
+            }
+          })
+          .clockOut()">退勤</button>
+      </div>
+    </div>
+  </body>
+</html>
